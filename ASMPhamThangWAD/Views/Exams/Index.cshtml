@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ASMPhamThangWAD.Models.Exam>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col"> @Html.DisplayNameFor(model => model.ExamSubject)</th>
+            <th scope="col"> @Html.DisplayNameFor(model => model.StartTime)</th>
+            <th scope="col"> @Html.DisplayNameFor(model => model.ExamDate)</th>
+            <th scope="col"> @Html.DisplayNameFor(model => model.ExamDuration)</th>
+            <th scope="col"> @Html.DisplayNameFor(model => model.ClassRoom)</th>
+            <th scope="col"> @Html.DisplayNameFor(model => model.Faculty)</th>
+            <th scope="col"> @Html.DisplayNameFor(model => model.Status)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExamSubject)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExamDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExamDuration)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ClassRoom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Faculty)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+            </tr>
+        }
+    </tbody>        
+</table>
