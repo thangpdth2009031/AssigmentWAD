@@ -4,10 +4,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace ASMPhamThangWAD.Models
+namespace ASMPhamThangWAD.Models.ViewModel
 {
-    public class Exam
-    {   
+    public class ExamModel
+    {
+        [Key]
         public int Id { get; set; }
         public string ExamSubject { get; set; }
         [DisplayFormat(DataFormatString = "{0:HH:mm}", ApplyFormatInEditMode = true)]
